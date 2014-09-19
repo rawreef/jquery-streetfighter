@@ -8,10 +8,11 @@ $(document).ready(function() {
     $('.ryu-still').show();
   })
   .mousedown(function() {
-    // play hadouken sound
+    playHadouken();    
     $('.ryu-ready').hide();
+    $('.ryu-still').hide();
     $('.ryu-throwing').show();
-    $(".hadouken").show();
+    $('.hadouken').finish().show()
     .animate(
       {'left': '300px'},
       500,
@@ -22,13 +23,30 @@ $(document).ready(function() {
     );
   })
   .mouseup(function() {
-  $('.ryu-throwing').hide();
-  $('.ryu-ready').show();
+    $('.ryu-throwing').hide();
+    $('.ryu-ready').show();
   });
 });
-/*
-I've commented out the .animate section above, as it stopped
-the whole file working. See halfway down this page for details:
-http://www.thinkful.com/courses/FEWD-001/unit/2/lesson/3/assignment/7
-*/
-// do I need a semicolon after }) normally?
+
+function playHadouken () {
+  $('#hadouken-sound')[0].volume = 0.5;
+  $('#hadouken-sound')[0].load();
+  $('#hadouken-sound')[0].play();
+};
+
+$(document).on("keydown", function(e){
+  if (e.which == 88){
+    $(".ryu-still").hide();
+    $(".ryu-ready").hide();
+    $(".ryu-throwing").hide();
+    $(".hadouken").hide();
+    $(".ryu-cool").show();
+  }
+});
+
+$(document).on("keyup", function(e){
+  if (e.which == 88){
+    $(".ryu-cool").hide();
+    $(".ryu-still").show();
+  }
+});
