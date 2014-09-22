@@ -1,9 +1,11 @@
 /** {
   outline: red 1px solid;
 }*/
+
 body {
 	background-color: black;
 }
+
 .main {
   background-color: white;
   margin-top: 110px;
@@ -11,31 +13,40 @@ body {
   min-width: 1200px;
   height: 500px;
 }
+
 .ryu {
 	float: left;
 }
+
 .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   width: 659px;
   height: 494px;
 }
+
 .ryu-ready, .ryu-throwing, .ryu-cool {
   display: none;
-} 
+}
+
 .ryu-ready {
   background-image: url('../images/ryu-ready-position.gif');
 }
+
 .ryu-still {
   background-image: url('../images/ryu-standing-still.png');
 }
+
 .ryu-throwing {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
+
 .ryu-cool {
   background-image: url('../images/ryu-cool.gif');
 }
+
 .hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   background-repeat: no-repeat;
 }
+
 .hadouken {
   background-image: url('../images/hadouken.gif');
   width: 156px; 
@@ -46,28 +57,31 @@ body {
   left: -212px;
   float: left;
 }
+
+/* Instructions box jumps down when Ryu fires Hadouken.
+Not sure why. */
 .instructions {
   padding: 10px 30px 20px;
-  margin: 100px;
+  margin: 50px 100px 0 0;
   float: right;
   border: 3px solid #888;
 }
+
 h1, p {
   font-family: impact, sans-serif;
   
   text-align: center;
 }
+
 h1 {
   font-size: 33px;
   padding: 10px 0 30px;
   color: #444;
 }
+
 p {
   font-size: 25px;
   padding: 0 0 10px 0;
   color: #777;
 }
-
-
-
 

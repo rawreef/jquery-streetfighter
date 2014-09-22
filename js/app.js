@@ -50,3 +50,4 @@ $(document).on("keyup", function(e){
     $(".ryu-still").show();
   }
 });
+
